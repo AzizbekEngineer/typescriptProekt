@@ -23,7 +23,7 @@ const Header: FC = () => {
                         <div className="container1 header__bottom__list">
                             <h3 className="header__logo">PORTEN</h3>
                             <ul className={`header__list ${show ? 'show' : ''}`}>
-                                <li className="header__close" onClick={(): void => setShow((prev: boolean) => false)}><IoCloseSharp /></li>
+                                <li className="header__close" onClick={(): void => setShow(false)}><IoCloseSharp /></li>
                                 <li className="header__item"><span>Понравилось</span></li>
                                 <li className="header__item"><span>личный кабинет</span></li>
                                 <li className="header__item"><span>настройки</span></li>
@@ -35,7 +35,7 @@ const Header: FC = () => {
                     </div>
                 </div>
             </header>
-            <div onClick={(): void => setShow((prev: boolean) => false)} className={`overlay ${show ? 'show__overlay' : ''}`}></div>
+            <div onClick={(): void => setShow(false)} className={`overlay ${show ? 'show__overlay' : ''}`}></div>
         </Fragment>
     )
 }
