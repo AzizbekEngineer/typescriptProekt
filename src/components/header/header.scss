@@ -1,0 +1,148 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.321);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    display: none;
+
+}
+
+@media (max-width:1036px) {
+    .show__overlay {
+        display: block;
+    }
+}
+
+.header {
+    &__top {
+        padding: 10px 0;
+        background: #000000;
+        color: #969696;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    &__nav__left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        span {
+            font-family: 'PT Sans';
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.53px;
+        }
+    }
+
+    &__bottom {
+        padding: 4px 0;
+        background: #0F0F0F;
+        color: white;
+    }
+
+    &__bottom__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__item {
+        font-family: "PT Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.12px;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        span {
+            opacity: .7;
+        }
+
+        svg {
+            color: white;
+            opacity: 1;
+            font-weight: 800;
+        }
+
+        &:hover {
+            span {
+                opacity: 1;
+            }
+
+            background: #1F1F1F;
+        }
+    }
+
+    &__close {
+        font-size: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: red;
+        display: none;
+    }
+
+    &__bar {
+        svg {
+            font-size: 20px;
+        }
+
+        display: none;
+    }
+
+    @media (max-width:1036px) {
+        &__bar {
+            font-size: 16px;
+            display: block;
+        }
+
+        &__list {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100vh;
+            background: #0F0F0F;
+            color: white;
+            transition: .4s;
+            z-index: 100;
+        }
+
+        &__close {
+            display: block;
+        }
+
+        .show {
+            left: 0;
+        }
+    }
+
+    @media (max-width:750px) {
+        &__top {
+            display: none;
+        }
+    }
+}

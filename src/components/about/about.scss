@@ -1,0 +1,127 @@
+.about {
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__top__title {
+        padding: 20px 0;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 47.99px;
+        text-align: center;
+        color: white;
+    }
+
+    &__top__left {
+        padding: 40px;
+        background: black;
+    }
+
+    &__products {
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    &__name {
+        padding: 10px 15px;
+        border: 2px solid white;
+    }
+
+    &__top__right {
+        background: url(../../assets/about1.svg) no-repeat center / cover;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 150px 40px 30px;
+        flex-direction: column;
+        gap: 15px;
+        color: white;
+    }
+
+    &__line {
+        width: 80px;
+        height: 3px;
+        background: white;
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    &__bottom__left {
+        background: url(../../assets/about2.svg) no-repeat center / cover;
+        height: 100%;
+    }
+
+    &__bottom__right {
+        text-align: center;
+        color: white;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+        height: 100%;
+    }
+
+    &__bottom__title {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 47.99px;
+    }
+
+    @media (max-width:1000px) {
+
+        &__top,
+        &__bottom {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        &__bottom__left {
+            height: 300px;
+        }
+
+    }
+
+    @media (max-width:560px) {
+        &__products {
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        &__top__title {
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+        &__bottom__title {
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+        &__desc {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width:370px) {
+        &__products {
+            grid-template-columns: 1fr;
+
+        }
+
+        &__top__title {
+            font-size: 20px;
+        }
+    }
+}
